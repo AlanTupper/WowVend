@@ -1,5 +1,10 @@
+//This is an example interface, feel free to change it to fit your needs.
+//All the business logic lives in the MainVendor, allowing the interface to change to your needs
+
 integer link_chan = 980208;
 
+//change these to match the linked prims you want to set up as buttons.
+//this interface uses the display screen as the More Info button, but it doesn't need to be.
 integer SCREEN = 1;
 integer BUY_BTTN = 2;
 integer BACK_BTTN = 3;
@@ -20,6 +25,7 @@ update_screen()
     llSetLinkTexture(SCREEN,slide,SCREEN_FACE); 
 }
 
+//simple bounded range, won't loop around.
 move(string dir)
 {
     integer old_index = index;
@@ -57,9 +63,6 @@ default
 {
     state_entry()
     {
-        
-        
-        
         integer possible_slides = llGetInventoryNumber(INVENTORY_TEXTURE);
         integer i;
         string texture;
@@ -79,7 +82,7 @@ default
     {
         integer link_touched = llDetectedLinkNumber(0);
         key toucher = llDetectedKey(0);
-        
+
         if(link_touched < 5)
         {
             if(link_touched == SCREEN){send_command("INFO",toucher);}

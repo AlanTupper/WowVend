@@ -3,7 +3,7 @@ WowVend
 
 A configurable Dogecoin-powered multi-item vendor for Opensim and Second Life
 
-FEATURES:
+Features:
 -------------
 * Sell items anywhere in the Metaverse.  Hypergrid, Closed grid, Second Life, Standalone, you got it.
 * Multi-item capable. Sell as many items as you can fit in the vendor, each at their own price point.

@@ -92,4 +92,10 @@ default
         }
     }
     
+    changed(integer change)
+    {
+        if(change & CHANGED_INVENTORY)
+        { llResetScript(); }
+    }
+    
 }

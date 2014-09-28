@@ -74,7 +74,8 @@ default
         }
         
         num_of_slides = llGetListLength(slides);
-        update_screen();        
+        if(num_of_slides > 0){update_screen();}
+        else {llSetLinkTexture(SCREEN,"default slide",SCREEN_FACE);}          
     }
 
     
